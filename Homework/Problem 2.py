@@ -12,9 +12,9 @@ from matplotlib import pyplot as plt
 from sklearn.linear_model import LinearRegression
 
 
-d = "/Users/domenjemec/Documents/Python/Homework/data/"
-scores = "scores.csv"
-sleep = "sleep.csv"
+d = '~/Documents/Python/Basics_Python/Homework/data/'
+scores = 'scores.csv'
+sleep ='sleep.csv'
 
 # extract data
 scoresdf = pd.read_csv(d + scores)
