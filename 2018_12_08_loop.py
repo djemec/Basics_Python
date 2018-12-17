@@ -17,7 +17,9 @@ def main():
         x = x + 1
 
     # define a for loop
-    for x in range(5, 10):
+
+    for x in range(0, 10):
+
         print(x)
 
     # use a for loop over a collection
