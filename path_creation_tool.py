@@ -8,6 +8,7 @@ Created on Thu Jan  3 19:13:59 2019
 import pandas as pd
 import numpy as np
 
+
 df = pd.DataFrame({
         'child':('A', 'B', 'C', 'D', 'E', 'F','C','X', 'B','A','C','A'),
         'parent': ('', 'F', 'B', 'F', 'B', '','E','L','F','','E','E')
@@ -15,7 +16,7 @@ df = pd.DataFrame({
 
 path_ind = pd.DataFrame(columns=['parent','child', 'path']).set_index(['child','parent'])
 
-def path_repo_Search(parent, child):
+def path_repo_search(parent, child):
     global path_ind
     if((child,parent) in path_ind.index):
         path = path_ind.loc[(child,parent),:]['path']
@@ -29,7 +30,7 @@ def getPath(rdf):
     global path_repo
     parent = rdf['parent']
     child = rdf['child']
-    path = path_repo_Search(parent, child)
+    path = path_repo_search(parent, child)
     if(path == ''):
         path = child
         ori_p = parent
